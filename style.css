@@ -1,0 +1,691 @@
+
+/* =============
+   Global styles
+   ============= */
+
+* {   
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;  
+   --bg-primary: hsl(322, 100%, 66%); 
+   --pale-cyan: hsl(193, 100%, 96%);
+   --dark-cyan: hsl(192, 100%, 9%);
+   --grayish-blue: hsl(208, 11%, 55%);
+}
+            
+body, 
+button { 
+   font-family: 'Open Sans', sans-serif; 
+   font-size: 18px;  
+   font-weight: 700;       
+}
+
+
+
+/* =============
+   Typography
+   ============= */ 
+
+h1, 
+h2,
+h3 {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+}
+
+.description h1 {
+   font-size: 1.5rem;
+}
+
+.description p {
+   margin: 24px 0;
+   font-size: 0.97rem;
+   font-weight: 400;
+   line-height: 1.55;
+}
+
+.content h2 {
+   color: var(--dark-cyan);
+   font-size: 1.3rem;
+   padding: 15px 0;
+}
+
+.content p {
+   color: var(--grayish-blue);
+   font-size: 0.9rem;
+   font-weight: 300;
+   line-height: 1.45;
+}
+
+.card4 h2 {   
+   color: var(--dark-cyan);
+   font-size: 1.1rem;
+   margin-bottom: 15px;
+   margin-top: 5px;
+}
+
+.copyright {
+   text-align: center;
+   font-size: 0.7rem;
+   font-weight: 300;
+   padding-top: 20px;
+   padding-bottom: 50px;
+   /* margin-bottom: 30px; */
+}
+
+/* =============
+   Layout
+   ============= */
+           
+.container {
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+   
+#landing-page {
+   background: url('./images/bg-hero-mobile.svg') no-repeat;
+   background-color: var(--pale-cyan);
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   max-height: 730px;
+   margin-bottom: 60px;   
+}
+   
+.top-section {
+   position: relative;
+   display: flex;
+   flex-direction: row; 
+   align-items: center;        
+   align-content: space-around;
+   margin: 50px;   
+}
+
+.logo {     
+   width: 150px;      
+}
+
+.banner img {
+   width: 100%;
+   max-width: 450px;  
+  
+}
+
+.card {    
+   margin: 20px;
+   border-radius: 15px;
+   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.illustration {
+   text-align: center;
+   padding: 30px;
+   padding-bottom: 35px;      
+}
+
+.illustration img {
+   width: 100%;
+}
+
+.content {
+   text-align: center;
+   padding: 40px;
+   padding-top: 0;
+}
+
+.card2 .illustration {
+   padding: 65px 50px;
+   padding-bottom: 49px;
+}
+
+.card3 .illustration {
+   padding: 60px 50px;
+   padding-bottom: 49px;
+}
+
+.card4 {
+   transform: translateY(83px);
+   background-color: #fff;
+   text-align: center;
+   margin: 15px;
+   padding: 40px 15px;
+   height: 180px;
+   z-index: 1;
+}
+
+footer {   
+   background-color: var(--dark-cyan);
+   color: #fff;
+   padding-top: 100px;   
+}
+
+.content-wrap {   
+   margin-bottom: 5px;
+}
+
+.filter-white {    
+   filter: brightness(0) invert(1);
+   width: 170px;
+   
+}
+
+footer ul {
+   list-style: none;
+   
+}
+
+.contact li {
+   display: flex;
+   font-size: 1.05rem;
+   font-weight: 300;
+   line-height: 1.5;
+   margin: 20px 0;
+}
+
+.contact li img {
+   padding: 5px 0;
+}
+
+.location, 
+.phone, 
+.email {
+   display: inline-block;
+   padding-right: 25px;
+}
+
+.info {
+   margin: 35px 0;
+}
+
+.info li {
+   padding: 10px 0;
+   font-weight: 300;
+}
+
+
+
+/* =============
+   Components
+   ============= */
+
+.btn {
+   position: absolute;
+   top: 0;
+   right: 0;
+   margin: 5px 0;    
+   font-size: 10px;   
+   background-color: #fff;
+   border: none;
+   border-radius: 25px;
+   width: 100px;
+   padding: 5px;
+   cursor: pointer;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.get-started {
+   margin-top: 10px;   
+   font-size: 12px;   
+   background-color: var(--bg-primary);
+   color: #fff;
+   border: none;
+   border-radius: 25px;
+   width: 250px;
+   padding: 12px;
+   cursor: pointer;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.card4 .get-started {
+   font-size: 10px;
+   width: 200px;
+   padding: 14px;
+   box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+}
+
+#social-media-links {   
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   list-style: none;
+   gap: 10px;
+  
+}
+
+#social-media-links a {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   height: 30px;
+   width: 30px;      
+   border: 1px solid #fff;
+   border-radius: 50%;
+   text-decoration: none;
+   scale: 0.9;
+   padding: 18px;
+}
+
+
+/* =============
+   Media queries
+   ============= */
+
+
+/* Device = Smartphone / Mobile First Design */
+@media (max-width: 480px) {            
+    
+            
+/* =============
+   Layout
+   ============= */
+
+#landing-page {
+   background: url('./images/bg-hero-mobile.svg') no-repeat center center/cover;     
+   background-color: var(--pale-cyan);
+   height: 100%;
+   min-height: 730px;
+   margin-bottom: 40px;   
+}   
+
+.top-section { 
+   margin: 20px 15px;   
+}   
+
+.logo {    
+   height: 16px;
+   width: 100px;
+   margin: 10px 0;
+}
+
+.description {
+   margin: 55px 40px;
+   text-align: center;
+}
+
+.banner {
+   margin: 0 40px;
+}
+
+.banner img {
+   width: 100%;
+   min-height: 220px;
+}
+
+.card {
+   height: 495px;
+   margin: 20px 15px;
+   border-radius: 15px;
+   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.illustration {
+   padding: 55px 50px;   
+}
+
+.card1 .illustration {
+   padding-bottom: 35px;
+}
+
+.card4 {
+   transform: translateY(83px);
+   background-color: #fff;
+   text-align: center;
+   margin: 15px;
+   padding: 40px 15px;
+   height: 180px;
+   z-index: 1;
+}
+
+.content-wrap {
+   margin: 40px 15px 0 15px;   
+}
+
+.info {
+   margin-bottom: 0;
+}
+
+.col-3 {
+   list-style: none;
+   margin-bottom: 40px;   
+}
+
+.col-3 li {
+   font-size: 1.1rem;
+   font-weight: 300;
+   padding: 10px 0;
+}
+
+}
+
+ 
+/* Device = Low Resolution Tablets, Mobiles (Landscape) */
+@media (min-width: 481px) and (max-width: 767px) {      
+         
+               
+/* =============
+   Layout
+   ============= */
+                
+.description {
+   margin: 20px 40px;
+   padding: 0 5%;
+   text-align: center;
+}
+   
+.banner {      
+   margin: 40px;
+   text-align: center;
+}
+   
+.illustration img {
+   /* width: 100%; */
+   max-width: 300px;
+}
+        
+.content-wrap {
+   margin: 40px 100px;     
+}
+
+.info {
+   margin-bottom: 0;
+}
+
+.col-3 {
+   list-style: none;
+   margin-bottom: 40px;   
+}
+
+.col-3 li {
+   font-size: 1.1rem;
+   font-weight: 300;
+   padding: 10px 0;
+}
+   
+                  
+/* =============
+   Components
+   ============= */
+   
+.get-started {      
+   margin-bottom: 20px;        
+}  
+
+}
+
+
+/* Device = Tablets, Ipads (portrait) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+               
+/* =============
+   Layout
+   ============= */
+
+#landing-page {
+   min-height: 920px;
+}  
+
+.description {
+   margin: 20px 40px;
+   padding: 0 70px;
+   text-align: center;
+}
+   
+.banner {
+   margin: 40px;      
+   text-align: center;
+}
+
+.banner img {
+   max-width: 550px;
+}
+     
+.illustration img {
+   /* width: 100%; */
+   max-width: 300px;
+}    
+   
+footer {
+   width: 100%;         
+}
+   
+.content-wrap {
+   /* margin: 40px 100px; */
+   margin: 5% 15%;      
+}
+
+.info {
+   margin-bottom: 0;
+}
+
+.col-3 {
+   list-style: none;
+   margin-bottom: 40px;   
+}
+
+.col-3 li {
+   font-size: 1.1rem;
+   font-weight: 300;
+   padding: 10px 0;
+}
+   
+                 
+/* =============
+   Components
+   ============= */
+        
+.get-started {      
+   margin-bottom: 20px;      
+}   
+    
+}
+
+
+/* Device = Laptops, Desktops */
+@media (min-width: 1025px) {
+
+/* =============
+   Typography
+   ============= */ 
+
+.description h1 {
+   font-size: 2.4rem;   
+   padding: 60px 100px 0 0;
+}
+
+.description p {
+   margin: 24px 0;
+   font-size: 1.1rem;
+   font-weight: 400;
+   line-height: 1.5;
+   padding-right: 70px;
+}
+
+ .content h2 {   
+   font-size: 1.8rem;
+   padding: 15px 0;
+}
+
+.content p {   
+   font-size: 1.1rem;
+   font-weight: 300;
+   line-height: 1.45;
+}
+
+.card4 h2 {   
+   font-size: 1.9rem;   
+}
+
+.copyright {
+   text-align: right;
+   font-size: 0.85rem;
+   font-weight: 300;
+   transform: translate(-5px, -70px);
+
+} 
+
+/* =============
+   Layout
+   ============= */
+             
+#landing-page {
+   background: url('./images/bg-hero-desktop.svg') no-repeat;
+   background-color: var(--pale-cyan);
+   width: 100vw;
+   height: 100vh;   
+   margin-bottom: 60px;   
+}
+   
+.top-section {   
+   margin: 100px;
+   margin-bottom: 0;   
+}
+
+.logo {     
+   width: 200px;      
+}
+
+.wrap {
+   display: flex;
+   align-items: center;   
+   margin: 100px;
+   margin-top: 50px;   
+}
+
+.description {
+   flex: 1;   
+}
+
+.banner {
+   flex: 1;
+}
+
+.banner img {
+   width: 100%;
+   min-width: 670px;  
+   transform: translateY(15px);
+}
+
+.card {
+   display: flex; 
+   align-items: center;        
+   height: 420px;
+   width: 1200px;   
+   margin: 20px;   
+}
+
+.card1, 
+.card3 {
+   flex-direction: row-reverse;
+}
+
+.illustration {
+   width: 100%;
+   max-width: 500px;
+}
+
+.content {
+   text-align: left;
+   padding: 120px;   
+}
+
+.card2 .illustration {
+   flex: 1;   
+   margin-left: 60px; 
+   padding: 60px;  
+}
+
+.conversations {   
+   padding-right: 25px;
+   flex: 1;
+}
+
+.card3 .illustration {
+   padding: 60px 50px;
+   padding-bottom: 49px;
+}
+
+.card4 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;   
+   width: 750px;
+   height: 270px;
+   transform: translateY(115px);     
+}
+
+
+footer {     
+   width: 100%;   
+   padding-top: 100px;    
+}
+
+
+.content-wrap {   
+   margin: 100px;
+   display: grid;
+   grid-template-columns: 40% 20% 20% 20%;   
+}
+
+.col-1,
+.col-2, 
+.col-3 {
+   margin-right: 100px;
+}
+
+.col-2 {
+   padding-top: 10px;
+}
+
+.col-3 {
+   margin-top: 33px;   
+   list-style: none;
+   font-size: 1.05rem;
+   font-weight: 300;
+   line-height: 1.5;
+   padding-top: 10px;
+}
+
+.col-3 li {   
+   font-size: 18px;
+   padding: 10px 0;
+   font-weight: 300;
+}
+
+.col-4 {
+   transform: translateX(-80px);
+   margin-top: 50px;
+}
+
+
+/* =============
+   Components
+   ============= */
+
+.btn {       
+   font-size: 12px;    
+   width: 150px;
+   padding: 10px;   
+} 
+
+.get-started {      
+   font-size: 14px;      
+   width: 270px;
+   padding: 16px;   
+}
+
+.card4 .get-started {
+   font-size: 16px;
+   width: 350px;
+   padding: 25px;
+   border-radius: 50px;
+   box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+}
+
+}
+
+    
+   
